@@ -985,7 +985,7 @@ Receiving objects: 100% (5/5), done.
 
 参数同 `clone`，默认是 repo 的名称，如果你想改名，可以在后续增加新的名称或路径。
 
-通过 `git status` 能看到新的 model 库。
+通过 `git status` 能看del 库。
 
 ```
 $ git status
@@ -1013,7 +1013,7 @@ $ cat .gitmodules
 
 
 
-如果有多个子模块，这里会列出多条。
+如果有多个子模块，出多条。
 
 通过`git diff`能看到更详细的信息
 
@@ -1033,7 +1033,7 @@ index 0000000..a8328fd
 
 虽然 model 是工作目录中的一个子目录，但 Git 还是会将它视作一个子模块。当你不在那个目录中时，Git 并不会跟踪它的内容， 而是将它看作子模块仓库中的某个具体的提交。
 
-如果你想看到更漂亮的差异输出，可以给 git diff 传递 --submodule 选项。
+如果你想看到更漂亮的差异输git diff 传递 --submodule 选项。
 
 ```
 $  git diff --cached --submodule

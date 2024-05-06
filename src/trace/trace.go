@@ -10,15 +10,7 @@ A trace.Trace provides tracing for short-lived objects, usually requests.
 A request handler might be implemented like this:
 
 	func fooHandler(w http.ResponseWriter, req *http.Request) {
-		tr := trace.New("mypkg.Foo", req.URL.Path)
-		defer tr.Finish()
-		...
-		tr.LazyPrintf("some event %q happened", str)
-		...
-		if err := somethingImportant(); err != nil {
-			tr.LazyPrintf("somethingImportant failed: %v", err)
-			tr.SetError()
-		}
+		tr := trace.New("mypkg.Foo",
 	}
 
 The /debug/requests HTTP endpoint organizes the traces by family,
